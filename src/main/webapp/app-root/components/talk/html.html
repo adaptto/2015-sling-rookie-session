@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+  <!--/* Include html_head script inherited from super component "common" */-->
+  <head data-sly-include="html_head.html"></head>
+
+  <body>
+
+    <!--/* Output talk properties */-->
+    <h1>${properties.jcr:title}</h1>
+    <p>${properties.jcr:description}</p>
+    <p><em>${properties.speaker}, ${properties.durationMin} min</em></p>
+
+    <!--/* Link to vCalendar view of talk */-->
+    <p><a href="${resource.path}.vcs">Add to my calender</a></p>
+
+    <!--/* Include like my function */-->
+    <div data-sly-resource="${'.' @ resourceType='/apps/rookiedemo/components/social/likeDisplay'}"/>
+
+    <p>
+      <a href="${resource.parent.path}.html">Back to parent</a>
+
+      <!--/* Integrate java-based sling component via it's resource type to render previous/next links */-->
+      <span data-sly-resource="${'.' @ resourceType='/apps/rookiedemo/components/resourceSiblingNavigator'}"/>
+
+    </p>
+
+    <hr/>
+
+    <!--/* Include discussion sling component via it's resource type */-->
+    <h3>Discussion</h3>
+    <div data-sly-resource="${'.' @ resourceType='/apps/rookiedemo/components/social/commentList'}"/>
+
+  </body>
+</html>

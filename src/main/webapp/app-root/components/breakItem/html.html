@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+  <!--/* Include html_head script inherited from super component "common" */-->
+  <head data-sly-include="html_head.html"></head>
+
+  <body>
+
+    <h1>${properties.jcr:title}</h1>
+    <p><em>${properties.durationMin} min</em></p>
+
+    <p>
+      <a href="${resource.parent.path}.html">Back to parent</a>
+
+      <!--/* Integrate java-based sling component via it's resource type to render previous/next links */-->
+      <span data-sly-resource="${'.' @ resourceType='/apps/rookiedemo/components/resourceSiblingNavigator'}"/>
+
+    </p>
+
+  </body>
+</html>

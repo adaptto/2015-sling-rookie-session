@@ -1,0 +1,14 @@
+{
+  "jcr:primaryType": "sling:OsgiConfig",
+  "user.mapping": [
+    
+    /* default configuration from AEM6 */  
+    "com.adobe.granite.oauth.server=oauthservice",
+    "com.adobe.granite.oauth.server:authentication-handler=admin",
+    "com.day.cq.cq-search-suggest=suggestionservice",
+    
+    /* user mapping for rookie demo */
+    "org.adaptto.rookie.demo=admin",
+    "org.adaptto.rookie.jspdemo=admin"    
+  ]
+}

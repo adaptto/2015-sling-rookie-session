@@ -1,0 +1,20 @@
+<!doctype html>
+<html data-sly-use.search="org.adaptto.rookie.demo.models.TagSearchController">
+
+  <head data-sly-include="html_head.html"></head>
+
+  <body>
+
+    <h1>adaptTo() Rookie Demo - Search by tag: ${search.tag}</h1>
+
+    <!--/* Display search results */-->
+    <ul data-sly-list.child="${search.result}">
+      <li>
+        <a href="${child.path}.html">${child.valueMap.jcr:title}</a>
+      </li>
+    </ul>
+
+    <p><a href="${resource.path}.html">Back to parent</a></p>
+
+  </body>
+</html>

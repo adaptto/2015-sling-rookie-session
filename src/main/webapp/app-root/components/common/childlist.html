@@ -1,0 +1,6 @@
+<!--/* Iterate over all child resources from current resource */-->
+<ul data-sly-list.child="${resource.listChildren}">
+  <li>
+    <a href="${child.path}.html">${child.valueMap.jcr:title}</a>
+  </li>
+</ul>

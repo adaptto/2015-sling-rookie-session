@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+  <!--/* Include html_head script inherited from super component "common" */-->
+  <head data-sly-include="html_head.html"></head>
+
+  <body>
+
+    <h1>adaptTo() Rookie Sightly Demo</h1>
+
+    <!--/* Include childlist via selector view inherited from super component "common" */-->
+    <h2>Overview</h2>
+    <div data-sly-resource="${'.' @ selectors='childlist'}"></div>
+
+    <!--/* Pass query parameter to tagsearch view using Sling suffix */-->
+    <h2>Talks by topic</h2>
+    <ul>
+      <li><a href="${resource.path}.tagsearch.html/Sling">All talks for Sling</a></li>
+      <li><a href="${resource.path}.tagsearch.html/JCR">All talks for JCR</a></li>
+    </ul>
+
+  </body>
+</html>

@@ -1,0 +1,120 @@
+{
+  "jcr:primaryType": "sling:OrderedFolder",
+  "sling:resourceType": "/apps/rookiedemo/components/index",
+  "jcr:title": "adaptTo() Rookie Sightly Demo",
+
+  "2015": {
+    "jcr:primaryType": "sling:OrderedFolder",
+    "sling:resourceType": "/apps/rookiedemo/components/folderView",
+    "jcr:title": "adaptTo() 2015",
+
+    "day1": {
+      "jcr:primaryType": "sling:OrderedFolder",
+      "sling:resourceType": "/apps/rookiedemo/components/folderView",
+      "jcr:title": "Day 1",
+
+      "rookie-session": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "sling:resourceType": "/apps/rookiedemo/components/talk",
+        "jcr:title": "Rookie-Session: JCR & Sling",
+        "jcr:description": "Basic introduction to JCR and Sling",
+        "startDate": "20150923T081500Z",
+        "endDate": "20150923T103000Z",
+        "durationMin": 135,
+        "speaker": "Andres Pegam, Stefan Seifert",
+        "tags": ["Sling","JCR"],
+        "discussion": {
+          "jcr:primaryType": "sling:OrderedFolder",
+          "entry1": {
+            "jcr:primaryType": "sling:OrderedFolder",
+            "author": "John Doe",
+            "text": "This was new to me.",
+            "sling:resourceType": "/apps/rookiedemo/components/social/comment"
+          }
+        }
+      },
+
+      "lunch": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "sling:resourceType": "/apps/rookiedemo/components/breakItem",
+        "jcr:title": "Lunch",
+        "startDate": "20150923T103000Z",
+        "endDate": "20150923T113000Z",
+        "durationMin": 60
+      },
+
+      "keynote-apache-sling-changes": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "sling:resourceType": "/apps/rookiedemo/components/talk",
+        "jcr:title": "Keynote: Apache Sling Changes",
+        "startDate": "20150923T113000Z",
+        "endDate": "20150923T120000Z",
+        "durationMin": 30,
+        "speaker": "Carsten Ziegeler, Mike Mueller",
+        "tags": ["Sling"]
+      },
+
+      "break": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "sling:resourceType": "/apps/rookiedemo/components/breakItem",
+        "jcr:title": "Break",
+        "startDate": "20150923T120000Z",
+        "endDate": "20150923T121500Z",
+        "durationMin": 15
+      },
+
+      "oak-introduction": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "sling:resourceType": "/apps/rookiedemo/components/talk",
+        "jcr:title": "Oak: an introduction for users",
+        "jcr:description": "This talk is an introduction to Oak for users and developers. It covers the basic architecture of Oak and the implications for applications: what developers need to know and why they might want to adjust their application code. Also, different micro kernels and their preferred usage scenarios are discussed.",
+        "startDate": "20150923T121500Z",
+        "endDate": "20150923T130000Z",
+        "durationMin": 45,
+        "speaker": "Michael Marth",
+        "tags": ["JCR","Oak"]
+      }
+
+    },
+
+    "day2": {
+      "jcr:primaryType": "sling:OrderedFolder",
+      "sling:resourceType": "/apps/rookiedemo/components/folderView",
+      "jcr:title": "Day 2",
+
+      "sling-ide-tooling": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "sling:resourceType": "/apps/rookiedemo/components/talk",
+        "jcr:title": "Sling IDE Tooling",
+        "jcr:description": "This talk contains an overview of the Sling IDE tooling which has been under development under the Apache Sling project for the last year. It will focus on how a developer can connect his/her IDE(*) to an Apache Sling installation and develop against it without the need to use other tools. We will also provide an intro to the technical foundations of the IDE tooling, for those interested in contributing.",
+        "startDate": "20150924T080000Z",
+        "endDate": "20150924T090000Z",
+        "durationMin": 60,
+        "speaker": "Robert Munteanu",
+        "tags": ["Sling"]
+      }
+
+    },
+
+    "day3": {
+      "jcr:primaryType": "sling:OrderedFolder",
+      "sling:resourceType": "/apps/rookiedemo/components/folderView",
+      "jcr:title": "Day 3",
+
+      "sling-multichannel": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "sling:resourceType": "/apps/rookiedemo/components/talk",
+        "jcr:title": "Slinging multichannel content the BrowserMap way / Device Detection",
+        "jcr:description": "Sling selectors provide a powerful and flexible way to decide what content to deliver and how to present it. BrowserMap provides client-side device capability detection. By combining Sling and BrowserMap, you can quickly and easily build multichannel publishing solutions, adapting your content delivery to the capabilities of the device visiting your site. In this session we\'ll look at how and why you should build this, and provide hints and tips on best practice.",
+        "startDate": "20150925T080000Z",
+        "endDate": "20150925T090000Z",
+        "durationMin": 60,
+        "speaker": "Andrew Savory, Conrad Woeltge",
+        "tags": ["sling","mobile"]
+      }
+
+    }
+
+  }
+
+}

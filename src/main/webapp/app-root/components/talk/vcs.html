@@ -1,0 +1,15 @@
+<div data-sly-use.contentType="${'org.adaptto.rookie.demo.models.ContentType' @ contentType='text/calendar'}" data-sly-unwrap>
+
+<!--/* Output talk details as vCalender to import in mail client */-->
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:${properties.startDate}
+DTEND:${properties.endDate}
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:${properties.jcr:description @ context='unsafe'}
+SUMMARY:${properties.jcr:title @ context='unsafe'}
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR
+
+</div>

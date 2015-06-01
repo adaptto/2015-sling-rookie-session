@@ -1,0 +1,8 @@
+<!--/* Render all existing comments */-->
+<div data-sly-use.discussion="org.adaptto.rookie.demo.models.Discussion" data-sly-list.child="${discussion.comments}">
+  <div data-sly-resource="${child.path}" data-sly-unwrap/>
+</div>
+
+
+<!--/* Render new comment form */-->
+<div data-sly-resource="${'.' @ resourceType='/apps/rookiedemo/components/social/newComment'}"/>

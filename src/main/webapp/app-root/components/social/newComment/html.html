@@ -1,0 +1,32 @@
+<p>
+
+  <!--/* Post to "*" which means create a new resource with unique name */-->
+  <form action="${resource.path}/discussion/*" method="POST" enctype="multipart/form-data">
+
+    <!--/* Define resource type for new node */-->
+    <input type="hidden" name="sling:resourceType" value="/apps/rookiedemo/components/social/comment"/>
+
+    <!--/* Ensure proper charset encoding */-->
+    <input type="hidden" name="_charset_" value="UTF-8"/>
+
+    <!--/* Redirect to main view after writing content */-->
+    <input type="hidden" name=":redirect" value="${resource.path}.html"/>
+
+    <!--/* Post to properties "author" and "text" in repository */-->
+    <table>
+      <tr>
+        <td>Your name:</td>
+        <td><input type="text" name="author"/></td>
+      </tr>
+      <tr>
+        <td>Comment:</td>
+        <td><textarea name="text"/></textarea></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Add comment"/></td>
+      </tr>
+    </table>
+
+  </form>
+</p>
