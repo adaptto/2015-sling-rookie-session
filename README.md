@@ -28,40 +28,19 @@ mvn -Dsling.url=http://localhost:4502 clean install sling:install
 Running Demo in Sling Launchpad
 -------------------------------
 
-#### Requirements
+You can use Sling 8 Lanuchpad to run the demo.
 
-- Make sure you have Maven 3.0.4 or higher installed
-- Set system environment variable
-```
-MAVEN_OPTS="-Xmx512M -XX:MaxPermSize=512m"
-```
 
-#### Build and start Sling Launchpad
+#### Install and start Sling Launchpad
 
-- Checkout Sling trunk via GIT
+- Download Sling Launchpad JAR: [org.apache.sling.launchpad-8.jar](http://repo1.maven.org/maven2/org/apache/sling/org.apache.sling.launchpad/8/org.apache.sling.launchpad-8.jar)
+- Start Sling Launchpad:
 ```
-git clone https://github.com/apache/sling.git sling
-```
-
-  or *alternatively* use SVN
-```
-svn co http://svn.eu.apache.org/repos/asf/sling/trunk sling
-```
-
-- Build Sling from trunk (this will take some time)
-```
-cd sling
-mvn -Dmaven.test.skip=true clean install
-```
-
-- Start Sling Launchpad
-```
-java -jar launchpad/builder/target/org.apache.sling.launchpad-8-SNAPSHOT.jar -f -
+java -jar org.apache.sling.launchpad-8.jar -f -
 ```
 
 - Launchpad is now running at
 [http://localhost:8080](http://localhost:8080)
-
 - If you want to write data to the repository (e.g. add a talk to a comment) you have to log in using the "Login" link displayed on the left site of the Intro Screen.
 
 
