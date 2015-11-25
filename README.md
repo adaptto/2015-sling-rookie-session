@@ -53,7 +53,7 @@ mvn -Dsling.url=http://localhost:8080 clean install sling:install
 ```
 
 - Go to demo intro page
-[http://localhost:8080/content/adaptto-jsp.html](http://localhost:8080/content/adaptto-jsp.html)
+[http://localhost:8080/content/adaptto.html](http://localhost:8080/content/adaptto.html)
 
 
 ---

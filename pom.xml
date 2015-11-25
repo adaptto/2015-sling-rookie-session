@@ -89,13 +89,15 @@
               SLING-INF/sample-content;overwrite:=true;ignoreImportProviders:=xml;path:=/content
             </Sling-Initial-Content>
 
-            <Export-Package>
-              org.adaptto.rookie.demo.*;version=${project.version}
-            </Export-Package>
-            
             <Sling-Model-Packages>
               org.adaptto.rookie.demo.models
             </Sling-Model-Packages>
+
+            <!-- Exported package versions differ in different javax.inject bundles -->
+            <Import-Package>
+              javax.inject;version="[0.0,2)",
+              *
+            </Import-Package>
 
           </instructions>
         </configuration>
@@ -184,13 +186,8 @@
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.models.api</artifactId>
-      <version>1.2.0</version>
+      <version>1.0.0</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>javax.inject</groupId>
-      <artifactId>javax.inject</artifactId>
-      <version>1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.sling</groupId>
